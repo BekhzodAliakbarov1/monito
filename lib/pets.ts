@@ -1,13 +1,3 @@
-import { StaticImageData } from 'next/image';
-import image1 from '/public/images/pet1.png';
-import image2 from '/public/images/pet2.png';
-import image3 from '/public/images/pet3.png';
-import image4 from '/public/images/pet4.png';
-import image5 from '/public/images/pet5.png';
-import image6 from '/public/images/pet6.png';
-import image7 from '/public/images/pet7.png';
-import image8 from '/public/images/pet8.png';
-
 export interface SmallPetInformation {
   id: number;
   name: string;

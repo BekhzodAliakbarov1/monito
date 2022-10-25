@@ -9,4 +9,7 @@ module.exports = withBundleAnalyzer({
     ignoreDuringBuilds: true,
   },
   assetPrefix: '.',
+  images: {
+    domains: ['cdn.pixabay.com'],
+  },
 });
