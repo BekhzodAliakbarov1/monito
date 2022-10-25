@@ -15,7 +15,7 @@ export interface SmallPetInformation {
   gene: string;
   age: string;
   cost: string;
-  image: StaticImageData;
+  image: string;
 }
 
 const data: SmallPetInformation[] = [
@@ -26,7 +26,7 @@ const data: SmallPetInformation[] = [
     gene: 'Male',
     age: '03 month',
     cost: '6.900.000 VND',
-    image: image1,
+    image: 'https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_1280.jpg',
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const data: SmallPetInformation[] = [
     gene: 'Female',
     age: '02 month',
     cost: '3.900.000 VND',
-    image: image2,
+    image: 'https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_1280.jpg',
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const data: SmallPetInformation[] = [
     gene: 'Male',
     age: '04 month',
     cost: '4.000.000 VND',
-    image: image3,
+    image: 'https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_1280.jpg',
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const data: SmallPetInformation[] = [
     gene: 'Male',
     age: '04 month',
     cost: '8.900.000 VND',
-    image: image4,
+    image: 'https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_1280.jpg',
   },
   {
     id: 5,
@@ -62,7 +62,7 @@ const data: SmallPetInformation[] = [
     gene: 'Male',
     age: '02 month',
     cost: '7.900.000 VND',
-    image: image5,
+    image: 'https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_1280.jpg',
   },
   {
     id: 6,
@@ -71,7 +71,7 @@ const data: SmallPetInformation[] = [
     gene: 'Female',
     age: '04 month',
     cost: '9.000.000 VND',
-    image: image6,
+    image: 'https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_1280.jpg',
   },
   {
     id: 7,
@@ -80,7 +80,7 @@ const data: SmallPetInformation[] = [
     gene: 'Female',
     age: '02 month',
     cost: '6.500.000 VND',
-    image: image7,
+    image: 'https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_1280.jpg',
   },
   {
     id: 8,
@@ -89,7 +89,7 @@ const data: SmallPetInformation[] = [
     gene: 'Male',
     age: '03 month',
     cost: '5.000.000 VND',
-    image: image8,
+    image: 'https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374_1280.jpg',
   },
 ];
 

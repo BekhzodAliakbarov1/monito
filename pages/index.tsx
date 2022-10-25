@@ -6,10 +6,11 @@ import PetsContainer from 'components/pets-container';
 import { GetStaticProps } from 'next';
 import { SmallPetInformation } from 'lib/pets';
 import SectionOneAd from 'components/ads/section-1';
-import data from 'lib/pets';
 
-export const getStaticProps: GetStaticProps = () => {
-  return { props: { petsList: data } };
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch(`https://monito-self.vercel.app/api/pets`);
+  const petsList = await res.json();
+  return { props: { petsList } };
 };
 
 const HomePageReact: React.FC<{

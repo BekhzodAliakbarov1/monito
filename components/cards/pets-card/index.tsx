@@ -7,7 +7,7 @@ const PetsCard: React.FC<SmallPetInformation> = ({ age, cost, gene, name, type, 
   return (
     <PetsCardWrapper>
       <ImageWrapper>
-        <Image src={image.src} alt="pets pictures" layout="fill" />
+        <Image src={image} alt="pets pictures" layout="fill" />
       </ImageWrapper>
       <PetsCardInfoWrapper>
         <h2>
