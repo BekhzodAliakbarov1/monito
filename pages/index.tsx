@@ -6,12 +6,10 @@ import PetsContainer from 'components/pets-container';
 import { GetStaticProps } from 'next';
 import { SmallPetInformation } from 'lib/pets';
 import SectionOneAd from 'components/ads/section-1';
-import { server } from 'config';
+import data from 'lib/pets';
 
-export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${server}/pets`);
-  const petsList = await res.json();
-  return { props: { petsList } };
+export const getStaticProps: GetStaticProps = () => {
+  return { props: { petsList: data } };
 };
 
 const HomePageReact: React.FC<{
