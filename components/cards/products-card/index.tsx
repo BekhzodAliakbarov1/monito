@@ -10,28 +10,35 @@ import {
   ProductsCardWrapper,
 } from './products-card.styles';
 
-const ProductsCard: React.FC<SmallProductInformation> = () => {
+const ProductsCard: React.FC<SmallProductInformation> = ({
+  cost,
+  image,
+  name,
+  prize,
+  product,
+  size,
+}) => {
   return (
     <ProductsCardWrapper>
       <ImageWrapper>
-        <Image src="/public/images/pet1.png" alt="pets pictures" layout="fill" />
+        <Image src={image} alt="products pictures" layout="fill" />
       </ImageWrapper>
       <ProductsCardTextBox>
-        <h2>Reflex Plus Adult Cat Food Salmon</h2>
+        <h2>{name}</h2>
         <MainInfoWrapper>
           <h3>
-            Product: <span>Dog Food</span>
+            Product: <span>{product}</span>
           </h3>
           <div />
           <h3>
-            Size: <span>385gm</span>
+            Size: <span>{size}</span>
           </h3>
         </MainInfoWrapper>
-        <h4>140.000 VND</h4>
+        <h4>{cost}</h4>
         <ProductPrizeWrapper>
           <PrizeIcon />
           <div />
-          <h4>Free Toy & Free Shaker</h4>
+          <h4>{prize}</h4>
         </ProductPrizeWrapper>
       </ProductsCardTextBox>
     </ProductsCardWrapper>

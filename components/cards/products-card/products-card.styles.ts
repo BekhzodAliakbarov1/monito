@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProductsCardWrapper = styled.div`
-  max-width: 264px;
+  max-width: 280px;
   width: auto;
   padding: 8px;
   background: #fdfdfd;
@@ -95,6 +95,7 @@ export const ProductPrizeWrapper = styled.div`
   border-radius: 8px;
   width: 100%;
   display: flex;
+  margin-top: auto;
   padding: 8px 10px;
   gap: 2px;
   align-items: center;
