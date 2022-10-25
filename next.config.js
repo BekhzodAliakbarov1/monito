@@ -12,4 +12,12 @@ module.exports = withBundleAnalyzer({
   images: {
     domains: ['cdn.pixabay.com'],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/robots.txt',
+        destination: '/api/dynamicrobot',
+      },
+    ];
+  },
 });

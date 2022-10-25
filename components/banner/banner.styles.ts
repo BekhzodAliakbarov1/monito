@@ -28,7 +28,7 @@ export const BannerBox = styled.div`
     color: #002a48;
     margin-bottom: 4px;
   }
-  > h3 {
+  > h2 {
     font-weight: 700;
     font-size: 46px;
     line-height: 60px;
@@ -63,7 +63,7 @@ export const BannerBox = styled.div`
       line-height: 60px;
       margin-bottom: 0px;
     }
-    > h3 {
+    > h2 {
       margin-top: 0px;
       font-weight: 700;
       font-size: 28px;
