@@ -11,10 +11,12 @@ import { SmallProductInformation } from 'lib/products';
 
 export const getStaticProps: GetStaticProps = async () => {
   const resPets = await fetch(`https://monito-self.vercel.app/api/pets`);
-  const resProducts = await fetch(`https://monito-self.vercel.app/api/products`);
+  // const resProducts = await fetch(`https://monito-self.vercel.app/api/products`);
+  // console.log(resProducts);
+
   const petsList = await resPets.json();
-  const productsList = await resProducts.json();
-  return { props: { petsList, productsList } };
+  // const productsList = await resProducts.json();
+  return { props: { petsList, productsList: [] } };
 };
 
 const HomePageReact: React.FC<{
