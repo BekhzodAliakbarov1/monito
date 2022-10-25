@@ -32,7 +32,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           {/* <link as="font" crossOrigin="" href="/font/SF Pro Text Regular.ttf" rel="preload" /> */}
           <meta name="description" content="Meta description content goes here." />
