@@ -6,10 +6,6 @@ import Head from 'next/head';
 import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 import { createGlobalStyle } from 'styled-components';
-import { Hydrate, QueryClientProvider } from 'react-query';
-import reactQueryClient from 'config/react-query-config';
-import { Provider } from 'react-redux';
-import { store } from 'redux-state/store';
 
 const GlobalStyle = createGlobalStyle`
     /* @font-face {
@@ -29,7 +25,6 @@ const GlobalStyle = createGlobalStyle`
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
   const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme);
-  const [queryClient] = useState(() => reactQueryClient);
 
   const toggleColorScheme = (value?: ColorScheme) => {
     const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark');
@@ -45,19 +40,13 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
       <GlobalStyle />
-      <QueryClientProvider client={queryClient}>
-        <Hydrate state={pageProps}>
-          <Provider store={store}>
-            <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-              <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-                <NotificationsProvider autoClose={4000}>
-                  <Component {...pageProps} />
-                </NotificationsProvider>
-              </MantineProvider>
-            </ColorSchemeProvider>
-          </Provider>
-        </Hydrate>
-      </QueryClientProvider>
+      <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+        <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
+          <NotificationsProvider autoClose={4000}>
+            <Component {...pageProps} />
+          </NotificationsProvider>
+        </MantineProvider>
+      </ColorSchemeProvider>
     </>
   );
 }

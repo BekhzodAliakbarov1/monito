@@ -15,7 +15,7 @@ const SectionOneAd = () => {
   return (
     <SectionOneAdWrapper>
       <SectionOneAdLeftContent>
-        <Image src={image} alt="ads one image" />
+        <Image objectFit="cover" src={image} alt="ads one image" />
       </SectionOneAdLeftContent>
       <SectionOneAdRightContent>
         <h1>One more friend</h1>
