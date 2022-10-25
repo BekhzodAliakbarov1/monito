@@ -7,7 +7,6 @@ import {
   SquareOne,
 } from './section-1.styles';
 import image from 'public/images/add1.png';
-import Image from 'next/image';
 import StyledButton from 'components/button';
 import MediaIcon from 'components/icons/media.icon';
 
@@ -15,7 +14,7 @@ const SectionOneAd = () => {
   return (
     <SectionOneAdWrapper>
       <SectionOneAdLeftContent>
-        <Image objectFit="cover" src={image} alt="ads one image" />
+        <img src={image.src} alt="ads one image" />
       </SectionOneAdLeftContent>
       <SectionOneAdRightContent>
         <h1>One more friend</h1>

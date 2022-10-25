@@ -20,6 +20,7 @@ export const SectionOneAdWrapper = styled.div`
 
 export const SectionOneAdLeftContent = styled.div`
   height: 342px;
+  width: 100%;
   position: relative;
   margin-left: -10%;
   z-index: 3;
