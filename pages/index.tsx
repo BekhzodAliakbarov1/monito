@@ -9,11 +9,11 @@ import SectionOneAd from 'components/ads/section-1';
 import ProductsContainer from 'components/products-container';
 import { SmallProductInformation } from 'lib/products';
 import { server } from 'config';
+import PetSellers from 'components/pet-sellers';
 
 export const getStaticProps: GetStaticProps = async () => {
   const resPets = await fetch(`${server}/pets`);
   const resProducts = await fetch(`${server}/products`);
-  console.log(resProducts);
 
   const petsList = await resPets.json();
   const productsList = await resProducts.json();
@@ -32,6 +32,7 @@ const HomePageReact: React.FC<{
         <PetsContainer petsList={petsList} />
         <SectionOneAd />
         <ProductsContainer productsList={productsList} />
+        <PetSellers />
       </Container>
     </GlobalWrapper>
   );

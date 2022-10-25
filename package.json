@@ -41,7 +41,8 @@
     "react-dom": "18.2.0",
     "react-query": "^3.39.2",
     "react-redux": "^8.0.4",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
