@@ -6,16 +6,21 @@ import PetsContainer from 'components/pets-container';
 import { GetStaticProps } from 'next';
 import { SmallPetInformation } from 'lib/pets';
 import SectionOneAd from 'components/ads/section-1';
+import ProductsContainer from 'components/products-container';
+import { SmallProductInformation } from 'lib/products';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`https://monito-self.vercel.app/api/pets`);
-  const petsList = await res.json();
-  return { props: { petsList } };
+  const resPets = await fetch(`https://monito-self.vercel.app/api/pets`);
+  const resProducts = await fetch(`https://monito-self.vercel.app/api/products`);
+  const petsList = await resPets.json();
+  const productsList = await resProducts.json();
+  return { props: { petsList, productsList } };
 };
 
 const HomePageReact: React.FC<{
   petsList?: SmallPetInformation[];
-}> = ({ petsList }) => {
+  productsList?: SmallProductInformation[];
+}> = ({ petsList, productsList }) => {
   return (
     <GlobalWrapper>
       <NavbarComponent />
@@ -23,6 +28,7 @@ const HomePageReact: React.FC<{
       <Container>
         <PetsContainer petsList={petsList} />
         <SectionOneAd />
+        <ProductsContainer productsList={productsList} />
       </Container>
     </GlobalWrapper>
   );

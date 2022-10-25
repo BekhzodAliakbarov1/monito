@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PetsContainerWrapper = styled.div`
+export const ProductsContainerWrapper = styled.div`
   width: auto;
   margin: 60px 0px;
   > button {
@@ -14,7 +14,7 @@ export const PetsContainerWrapper = styled.div`
   }
 `;
 
-export const PetsContainerHeader = styled.div`
+export const ProductsContainerHeader = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@ export const PetsContainerHeader = styled.div`
   }
 `;
 
-export const PetsContainerHeaderTextContent = styled.div`
+export const ProductsContainerHeaderTextContent = styled.div`
   display: flex;
   flex-direction: column;
   h3 {
@@ -59,7 +59,7 @@ export const PetsContainerHeaderTextContent = styled.div`
   }
 `;
 
-export const PetsContainerDataWrapper = styled.div`
+export const ProductsContainerDataWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;

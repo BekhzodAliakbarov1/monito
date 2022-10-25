@@ -25,7 +25,7 @@ const NavbarComponent = () => {
         <div>
           <NavbarBox>
             <NavbarLeftContent>
-              <img src={image.src} width="115px" />
+              <img src={image.src} width="115px" alt="logo" />
               <LinksWrapper>
                 <Link href="/">Home</Link>
                 <Link href="/">Category</Link>
@@ -54,7 +54,7 @@ const NavbarComponent = () => {
             <div onClick={() => setIsOpen(!isOpen)}>
               <MenuIcon />
             </div>
-            <img width="92px" height="32px" src={image.src} />
+            <img width="92px" height="32px" src={image.src} alt="logo" />
             <SearchIcon size="25" />
           </NavbarMobileBox>
         </div>
