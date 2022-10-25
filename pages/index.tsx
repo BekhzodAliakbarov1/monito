@@ -6,9 +6,10 @@ import PetsContainer from 'components/pets-container';
 import { GetStaticProps } from 'next';
 import { SmallPetInformation } from 'lib/pets';
 import SectionOneAd from 'components/ads/section-1';
+import { server } from 'config';
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch('http://localhost:3000/api/pets');
+  const res = await fetch(`${server}/pets`);
   const petsList = await res.json();
   return { props: { petsList } };
 };
